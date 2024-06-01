@@ -39,3 +39,15 @@ a:hover{
 li:last-child{
     color: red;
 }
+
+p{
+    color: blueviolet;
+}
+
+.color{
+    color: red;
+}
+
+#color{
+    color: black;
+}
