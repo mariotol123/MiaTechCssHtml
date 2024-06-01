@@ -60,3 +60,7 @@ p{
 .container ul li:last-child{
     color: rebeccapurple;
 }
+
+.paragrafo2{
+    color: rgb(255, 0, 0);
+}
