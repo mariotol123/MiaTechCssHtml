@@ -51,3 +51,12 @@ p{
 #color{
     color: black;
 }
+
+.container{
+    color: rebeccapurple;
+    text-align: center;
+}
+
+.container ul li:last-child{
+    color: rebeccapurple;
+}
