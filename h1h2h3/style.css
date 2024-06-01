@@ -64,3 +64,11 @@ p{
 .paragrafo2{
     color: rgb(255, 0, 0);
 }
+
+.paragrafo2{
+    color: #FF0000;
+}
+
+.paragrafo2{
+    color: rgba(255, 0, 0, 0.7);
+}
