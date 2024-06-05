@@ -1,6 +1,6 @@
 body{
     height: 100000px;
-    
+    background-color: red;
 }
 
 div{
@@ -14,5 +14,11 @@ div{
 
 nav{
     position: sticky;
+    top: 0;
+    background-color: aqua;
+}
+
+nav{
+    position: fixed;
     top: 0;
 }
