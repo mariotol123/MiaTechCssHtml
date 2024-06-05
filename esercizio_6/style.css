@@ -1,3 +1,8 @@
 .container1 img{
     float: right;
 }
+
+
+div.container1 p.container__p2{
+    clear: right;
+}
