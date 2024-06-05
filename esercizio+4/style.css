@@ -1,0 +1,13 @@
+div{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+}
+
+.p1{
+    font-size: 7rem;
+}
+
+.p2{
+    font-size: 7em;
+}
