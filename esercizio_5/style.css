@@ -11,3 +11,8 @@ div{
     bottom: 0px;
     right: 0px;
 }
+
+nav{
+    position: sticky;
+    top: 0;
+}
