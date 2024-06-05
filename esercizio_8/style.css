@@ -1,0 +1,12 @@
+:root {
+    --red-color: #ff0000;
+    --custom-padding: 20px;
+}
+
+* {
+    color: var(--red-color);
+}
+
+div p{
+    padding: var(--custom-padding);
+}
