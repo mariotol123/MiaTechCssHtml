@@ -5,19 +5,23 @@ div.container ul.list li{
 
 div.container p.para span.para__span{
     border: 1px solid red;
-    height: 20px;
-    width: 20px;
 }
 
 .span1{
     display: inline;
+    height: 50px;
+    width: 50px;
 }
 
 .span2{
     display: inline-block;
+    height: 50px;
+    width: 50px;
 }
 
 .span3{
     display: block;
+    height: 50px;
+    width: 50px;
 }
 
