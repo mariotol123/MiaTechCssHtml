@@ -6,3 +6,15 @@
 div.container1 p.container__p2{
     clear: right;
 }
+
+
+
+.border{
+    border: solid red 2px;
+}
+
+
+.container2__p1, .container2__p2, .container2__p3 {
+    width: calc(100% / 4);
+    float: left;
+}
