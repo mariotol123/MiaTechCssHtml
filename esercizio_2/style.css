@@ -1,3 +1,22 @@
 div.container ul.list li{
     display: inline-block;
 }
+
+
+div.container p.para span.para__span{
+    border: 1px solid red;
+    height: 20px;
+    width: 20px;
+}
+
+.span1{
+    display: inline;
+}
+
+.span2{
+    display: inline-block;
+}
+
+.span3{
+    display: block;
+}
