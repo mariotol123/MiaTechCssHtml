@@ -1,0 +1,11 @@
+.card{
+    position: relative;
+    border: solid red 2px;
+    display: inline-block;
+}
+
+.card__x{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
