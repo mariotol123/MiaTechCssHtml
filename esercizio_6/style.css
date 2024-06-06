@@ -18,3 +18,9 @@ div.container1 p.container__p2{
     width: calc(100% / 4);
     float: left;
 }
+
+.card{
+    position: relative;
+    border: solid red 2px;
+    /* display: inline-block; */
+}

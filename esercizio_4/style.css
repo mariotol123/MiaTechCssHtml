@@ -21,5 +21,6 @@ div{
 .container{
     background-color: black;
     width: 50%;
-    padding-bottom: 50%;
+    /* padding-bottom: 50%; */
+    height: 50vh;
 }
