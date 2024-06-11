@@ -1,0 +1,28 @@
+.flex div {
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    height: 600px;
+}
+
+.flex-item{
+    display: flex;
+}
+
+.flex-item1{
+    align-self: flex-end;
+}
+
+.flex-item2{
+    align-self: flex-start;
+}
+
+.flex-item3{
+    align-self: auto;
+}
