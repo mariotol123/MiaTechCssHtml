@@ -1,0 +1,44 @@
+.flex div, .flex2 div, .flex3 div {
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+}
+
+.flex, .flex2, .flex3 {
+    display: flex;
+    background-color: red;
+    margin-bottom: 100px;
+}
+
+.flex-item1 {
+    flex-grow: 0;
+}
+
+.flex-item2 {
+    flex-grow: 1;
+}
+
+.flex-item3 {
+    flex-grow: 2;
+}
+
+.flex2 {
+    width: 300px;
+}
+
+.flex2-item1 {
+    flex-shrink: 10;
+}
+
+.flex2-item2 {
+    flex-shrink: 1;
+}
+
+.flex2-item3 {
+    flex-shrink: 1;
+}
+
+
+.flex3-item2{
+    flex-basis: 400px;
+}
