@@ -1,0 +1,12 @@
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: red;
+}
+
+.flex div{
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+}
