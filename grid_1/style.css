@@ -1,0 +1,8 @@
+.container div{
+    border: 2px solid black;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
