@@ -1,3 +1,7 @@
+.backgroundcolor, .container-nav nav ul li:last-child {
+  background-color: #e7e7e7;
+}
+
 .container-nav {
   width: 100%;
 }
@@ -11,6 +15,9 @@
 }
 .container-nav nav ul li:hover {
   color: #ff0000;
+}
+.container-nav nav ul li:last-child {
+  border-color: #333333;
 }
 
 /*# sourceMappingURL=style.css.map */

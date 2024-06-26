@@ -1,6 +1,11 @@
 $font-size: 18px;
 $primary-color: #ff0000;
 
+.backgroundcolor{
+    background-color: #e7e7e7;
+}
+
+
 .container-nav{
     width: 100%;
     
@@ -16,7 +21,13 @@ $primary-color: #ff0000;
                 &:hover{
                     color: $primary-color;
                 }
-            } 
+
+                &:last-child{
+                    @extend .backgroundcolor;
+                    border-color: #333333;
+                }
+            }
+            
         }
     }
 }
