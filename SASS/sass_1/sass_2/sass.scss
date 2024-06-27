@@ -1,33 +1,43 @@
 $font-size: 18px;
 $primary-color: #ff0000;
+$secondodiv-width: 600px; 
 
 .backgroundcolor{
     background-color: #e7e7e7;
 }
 
-
-.container-nav{
-    width: 100%;
-    
-    nav{
+body{
+    .container-nav{
+        width: 100%;
         
-        ul{
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            li{
-                font-size: $font-size;
-                
-                &:hover{
-                    color: $primary-color;
-                }
-
-                &:last-child{
-                    @extend .backgroundcolor;
-                    border-color: #333333;
-                }
-            }
+        nav{
             
+            ul{
+                display: flex;
+                justify-content: center;
+                gap: 50px;
+                li{
+                    font-size: $font-size;
+                    
+                    &:hover{
+                        color: $primary-color;
+                    }
+    
+                    &:last-child{
+                        @extend .backgroundcolor;
+                        border-color: #333333;
+                    }
+                }
+                
+            }
         }
+    }
+
+    .secondodiv{
+        width: $secondodiv-width;
+    }
+
+    .primodiv{
+        width: $secondodiv-width/3;
     }
 }
