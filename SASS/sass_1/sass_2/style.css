@@ -16,6 +16,9 @@ body .container-nav nav ul li {
 body .container-nav nav ul li:hover {
   color: #ff0000;
 }
+body .container-nav nav ul li:first-child {
+  font-size: 0.8em;
+}
 body .container-nav nav ul li:last-child {
   border-color: #333333;
 }

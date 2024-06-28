@@ -1,5 +1,11 @@
 @import './_variable.scss';
 
+
+@function em ($target, $context){
+    @return ($target / $context) * 1em;
+}
+
+
 .backgroundcolor{
     background-color: #e7e7e7;
 }
@@ -19,6 +25,10 @@ body{
                     
                     &:hover{
                         color: $primary-color;
+                    }
+
+                    &:first-child{
+                        font-size: em(24,30);
                     }
     
                     &:last-child{
