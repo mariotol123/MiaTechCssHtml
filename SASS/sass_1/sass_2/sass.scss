@@ -24,7 +24,12 @@ body{
                     font-size: $font-size;
                     
                     &:hover{
-                        color: $primary-color;
+                        @if $noHover == true{
+                            color: $primary-color;
+
+                        } @else{
+                            color: black;
+                        }
                     }
 
                     &:first-child{
