@@ -5,6 +5,12 @@
     @return ($target / $context) * 1em;
 }
 
+@each $color in $colors{
+    .color_#{$color}{
+        color : $color;
+    }
+}
+
 
 .backgroundcolor{
     background-color: #e7e7e7;

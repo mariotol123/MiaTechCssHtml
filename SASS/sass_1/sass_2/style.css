@@ -1,3 +1,19 @@
+.color_blue {
+  color: blue;
+}
+
+.color_green {
+  color: green;
+}
+
+.color_orange {
+  color: orange;
+}
+
+.color_purple {
+  color: purple;
+}
+
 .backgroundcolor, body .container-nav nav ul li:last-child {
   background-color: #e7e7e7;
 }
@@ -14,7 +30,7 @@ body .container-nav nav ul li {
   font-size: 18px;
 }
 body .container-nav nav ul li:hover {
-  color: white;
+  color: #ff0000;
 }
 body .container-nav nav ul li:first-child {
   font-size: 0.8em;
