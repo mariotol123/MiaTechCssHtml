@@ -1,0 +1,13 @@
+body{
+    height: 200vh;
+    position: relative;
+}
+
+div{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
