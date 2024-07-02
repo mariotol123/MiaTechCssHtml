@@ -1,23 +1,16 @@
-.color_blue {
-  color: blue;
-}
-
-.color_green {
-  color: green;
-}
-
-.color_orange {
-  color: orange;
-}
-
-.color_purple {
-  color: purple;
-}
-
 .backgroundcolor, body .container-nav nav ul li:last-child {
   background-color: #e7e7e7;
 }
 
+body .container-nav {
+  background-color: #000000;
+}
+body .container-nav nav ul li {
+  color: white;
+}
+body .container-nav nav ul li:hover {
+  color: yellow;
+}
 body .container-nav {
   width: 100%;
 }

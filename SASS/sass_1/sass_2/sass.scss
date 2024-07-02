@@ -1,62 +1,96 @@
 @import './_variable.scss';
 
-
-@function em ($target, $context){
-    @return ($target / $context) * 1em;
+@function em($target, $context) {
+  @return ($target / $context) * 1em;
 }
 
-@each $color in $colors{
-    .color_#{$color}{
-        color : $color;
-    }
-}
+@mixin theme($theme) {
+  @if $theme == 'light' {
+    .container-nav {
+      background-color: white;
 
-
-.backgroundcolor{
-    background-color: #e7e7e7;
-}
-
-body{
-    .container-nav{
-        width: 100%;
-        
-        nav{
-            
-            ul{
-                display: flex;
-                justify-content: center;
-                gap: 50px;
-                li{
-                    font-size: $font-size;
-                    
-                    &:hover{
-                        @if $noHover == true{
-                            color: $primary-color;
-
-                        } @else{
-                            color: black;
-                        }
-                    }
-
-                    &:first-child{
-                        font-size: em(24,30);
-                    }
-    
-                    &:last-child{
-                        @extend .backgroundcolor;
-                        border-color: #333333;
-                    }
-                }
-                
+      nav {
+        ul {
+          li {
+            @each $name, $color in $colors {
+              &.color_#{$name} {
+                color: $color;
+              }
             }
+
+            &:hover {
+              color: black;
+            }
+          }
         }
+      }
     }
+  } @else if $theme == 'dark' {
+    .container-nav {
+      background-color: #000000;
 
-    .secondodiv{
-        width: $secondodiv-width;
-    }
+      nav {
+        ul {
+          li {
+            color: white;
 
-    .primodiv{
-        width: $secondodiv-width/3;
+            &:hover {
+              color: yellow;
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+.backgroundcolor {
+  background-color: #e7e7e7;
+}
+
+body {
+  @include theme('dark');
+
+  .container-nav {
+    width: 100%;
+
+    nav {
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        li {
+          font-size: $font-size;
+
+          &:hover {
+            @if $noHover == true {
+              color: $primary-color;
+            } @else {
+              @include theme('dark') {
+                color: yellow;
+              }
+            }
+          }
+
+          &:first-child {
+            font-size: em(24, 30);
+          }
+
+          &:last-child {
+            @extend .backgroundcolor;
+            border-color: #333333;
+          }
+        }
+      }
+    }
+  }
+
+  .secondodiv {
+    width: $secondodiv-width;
+  }
+
+  .primodiv {
+    width: $secondodiv-width / 3;
+  }
 }

@@ -1,6 +1,11 @@
 $primary-color: #ff0000;
 $secondary-color: rgb(132, 2, 2);
 $font-size: 18px;
-$secondodiv-width: 600px; 
+$secondodiv-width: 600px;
 $noHover: true;
-$colors: blue, green, orange, purple;
+$colors: (
+  "blue": #0000ff,
+  "orange": #ffa500,
+  "purple": #800080,
+  "green": #008000
+);
