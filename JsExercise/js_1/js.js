@@ -7,3 +7,12 @@ console.log(numero2);
 
 numero1 = 10;
 console.log(numero1);
+
+
+let number = 22;
+
+{let number = 25;
+    console.log(number);
+}
+
+console.log(number);
