@@ -38,3 +38,39 @@ body {
 .calculator .span-2 {
     grid-column: span 2;
 }
+
+@media (max-width: 600px) {
+    .calculator {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(6, 60px);
+        gap: 8px;
+    }
+
+    .calculator .display {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    .calculator button {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: repeat(6, 50px);
+        gap: 6px;
+    }
+
+    .calculator .display {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .calculator button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
