@@ -16,3 +16,13 @@ let number = 22;
 }
 
 console.log(number);
+
+let outside = 50;
+
+{let inside = 100;
+    console.log(outside);
+    console.log(inside);
+}
+
+console.log(outside);
+console.log(inside);
