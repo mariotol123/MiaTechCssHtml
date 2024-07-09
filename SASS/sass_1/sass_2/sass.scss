@@ -86,11 +86,25 @@ body {
     }
   }
 
-  .secondodiv {
-    width: $secondodiv-width;
+  
+  @for $i from 1 through 2 {
+    .div-#{$i} {
+      @if $i == 1 {
+        background-color: #f0f0f0;
+      } @else if $i == 2 {
+        background-color: #333333;
+        color: #ffffff;
+      }
+    }
   }
 
   .primodiv {
+    @extend .div-1;
     width: $secondodiv-width / 3;
+  }
+
+  .secondodiv {
+    @extend .div-2;
+    width: $secondodiv-width;
   }
 }

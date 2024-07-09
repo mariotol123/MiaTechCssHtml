@@ -31,11 +31,16 @@ body .container-nav nav ul li:first-child {
 body .container-nav nav ul li:last-child {
   border-color: #333333;
 }
-body .secondodiv {
-  width: 600px;
+body .div-1, body .primodiv {
+  background-color: #f0f0f0;
+}
+body .div-2, body .secondodiv {
+  background-color: #333333;
+  color: #ffffff;
 }
 body .primodiv {
   width: 200px;
 }
-
-/*# sourceMappingURL=style.css.map */
+body .secondodiv {
+  width: 600px;
+}/*# sourceMappingURL=sass.css.map */
