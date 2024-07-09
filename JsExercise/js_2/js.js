@@ -1,4 +1,4 @@
-let number = 0;
+let number = 10;
 
 
 for (let i = 0; i <= 20; i++){
@@ -10,8 +10,11 @@ for (let i = 0; i <= 20; i++){
 
 
 
-// while(number <= 10){
-//     if(number % 2 != 0){
-//         console.log(number);
-//     }
-// }
+while(number >= 0){
+
+    if(number % 2 != 0){
+        console.log(number)
+    }
+    number--;
+
+}

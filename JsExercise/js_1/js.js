@@ -20,6 +20,7 @@ console.log(number);
 let outside = 50;
 
 {let inside = 100;
+    outside = 150;
     console.log(outside);
     console.log(inside);
 }
