@@ -15,3 +15,7 @@ personCopy.age = 30;
 
 console.log(personCopy.age);
 console.log(person.age);
+
+
+person.job = "Developer";
+console.log(person);
