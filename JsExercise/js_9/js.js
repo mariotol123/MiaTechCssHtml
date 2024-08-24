@@ -19,3 +19,10 @@ console.log(person.age);
 
 person.job = "Developer";
 console.log(person);
+
+
+for (const key in person) {
+    
+    console.log(`${key} : ${person[key]}`);
+
+}
