@@ -70,3 +70,12 @@ auto.aggiungiChilometraggio(1);
 
  autoElettrica.ricarica(100);
  autoElettrica.mostraRicarica();
+
+
+ Automobile.prototype.saluta = function() {
+
+    console.log(`Ciaooo ${this.marca} come stai ${this.modello}`);
+ }
+
+ document.write(auto.saluta());
+ document.write(autoElettrica.saluta());
