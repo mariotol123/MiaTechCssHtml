@@ -17,6 +17,16 @@ class Automobile {
         this.chilometraggio = this.chilometraggio + number;
         
     }
+
+    static confrontaChilometraggio(auto1,auto2){
+        if(auto1.chilometraggio > auto2.chilometraggio){
+            document.write(`Il chilometreggio di ${auto1.marca} e' piu elevato`);
+        } else if(auto1.chilometraggio = auto2.chilometraggio){
+            document.write(`Il chilometreggio di ${auto1.marca} e' uguale`);
+        } else {
+            document.write("Hanno lo stesso chilometreggio");
+        }
+    }
     
     mostraChilometraggio(){
         console.log(`${this.chilometraggio}`);
@@ -49,6 +59,7 @@ class Automobile {
 
 
 let auto = new Automobile("Renault", "C4", 1988,200_000);
+let auto2 = new Automobile("Mercedes", "C4", 1988,100_000);
 
 
 
@@ -106,3 +117,5 @@ autoElettrica.description();
 peguoet._controllaChilometri();
 autoElettrica.ricarica(100);
 autoElettrica.mostraRicarica();
+
+Automobile.confrontaChilometraggio(auto,auto2);
