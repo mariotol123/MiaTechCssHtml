@@ -18,6 +18,7 @@ class Automobile {
     aggiungiChilometraggio(number){
         
         this.chilometraggio = this.chilometraggio + number;
+        this.#incrementaContatore();
         
     }
 
@@ -37,7 +38,7 @@ class Automobile {
     
     description(){
         console.log(`La marca: ${this.marca} e' del modello ${this.modello} dell'anno ${this.anno} e ${this.chilometraggio}`);
-        this.#incrementaContatore();
+        
     }
 
     #calcolaEta(){
@@ -59,16 +60,27 @@ class Automobile {
         }
     }
 
+
     #incrementaContatore(){
         this.#contatoreChiamata++;
+    }
+
+    mostraContatoreChiamate(){
+        return this.#contatoreChiamata;
     }
 
 }
 
 
+
 let auto = new Automobile("Renault", "C4", 1988,200_000);
 let auto2 = new Automobile("Mercedes", "C4", 1988,100_000);
 
+auto.aggiungiChilometraggio(200);
+auto.aggiungiChilometraggio(200);
+auto.aggiungiChilometraggio(200);
+
+console.log(auto.mostraContatoreChiamate());
 
 
 class Elettrica extends Automobile {
