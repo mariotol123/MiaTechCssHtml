@@ -4,6 +4,9 @@ class Automobile {
     anno;
     chilometraggio;
 
+
+    #contatoreChiamata = 0;
+
     constructor(marca,modello,anno,chilometraggio){
         this.marca = marca;
         this.modello = modello;
@@ -34,6 +37,7 @@ class Automobile {
     
     description(){
         console.log(`La marca: ${this.marca} e' del modello ${this.modello} dell'anno ${this.anno} e ${this.chilometraggio}`);
+        this.#incrementaContatore();
     }
 
     #calcolaEta(){
@@ -53,6 +57,10 @@ class Automobile {
         } else {
             console.log("tutto perfetto");
         }
+    }
+
+    #incrementaContatore(){
+        this.#contatoreChiamata++;
     }
 
 }
