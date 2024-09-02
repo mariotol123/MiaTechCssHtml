@@ -82,12 +82,24 @@ class Automobile {
         
     }
 
+    static verificaIstana(obj,classe){
+
+        if(obj instanceof classe){
+            document.write(`${obj.constructor.name} e' istanza di ${classe.name}`);
+        } else {
+            document.write("Non si appartengono");
+        }
+
+    }
+
 }
 
 
 
 let auto = new Automobile("Renault", "C4", 1988,200_000);
 let auto2 = new Automobile("Mercedes", "C4", 1988,100_000);
+
+Automobile.verificaIstana(auto,Automobile);
 
 auto.aggiungiChilometraggio(200);
 auto.aggiungiChilometraggio(200);
@@ -169,4 +181,10 @@ class Camion extends Automobile {
         console.log(`La marca: ${this.marca} e' del modello ${this.modello} dell'anno ${this.anno} e ${this.chilometraggio} e la capacita' massima e' ${this.caricoMassimo}`);
     }
 
+
 }
+
+
+let auto3 = new Automobile("Renault", "Clio", 2000, 150_000);
+
+let camion = new Camion("200KG", "Fiato", "Iveco", 200_090, 1997);
