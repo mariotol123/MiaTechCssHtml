@@ -69,6 +69,19 @@ class Automobile {
         return this.#contatoreChiamata;
     }
 
+    getChilometraggio () {
+        return this.chilometraggio;
+    }
+
+    setChilometraggio (chilometraggio) {
+
+        if(chilometraggio >= this.chilometraggio){
+
+            return this.chilometraggio = chilometraggio;
+        }
+        
+    }
+
 }
 
 
