@@ -152,3 +152,21 @@ autoElettrica.ricarica(100);
 autoElettrica.mostraRicarica();
 
 Automobile.confrontaChilometraggio(auto,auto2);
+
+
+
+class Camion extends Automobile {
+    caricoMassimo;
+
+    constructor(caricoMassimo, modello, marca, chilometraggio, anno){
+        super(marca,modello,chilometraggio,anno)
+
+        this.caricoMassimo = caricoMassimo;
+
+    }
+
+    description(){
+        console.log(`La marca: ${this.marca} e' del modello ${this.modello} dell'anno ${this.anno} e ${this.chilometraggio} e la capacita' massima e' ${this.caricoMassimo}`);
+    }
+
+}
