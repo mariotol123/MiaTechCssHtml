@@ -23,3 +23,17 @@ console.log(cognome);
 console.log(mansione);
 console.log(eta);
 console.log(citta);
+
+
+let obj = {
+    sesso: "M",
+    professione: "Tolvo",
+};
+
+let {sesso, professione, classe = "5c", scuola = "Sbordone"} = obj
+
+
+console.log(sesso);
+console.log(cognome);
+console.log(classe);
+console.log(scuola);
