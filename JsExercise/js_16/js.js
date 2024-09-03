@@ -37,3 +37,9 @@ console.log(sesso);
 console.log(cognome);
 console.log(classe);
 console.log(scuola);
+
+
+const { sesso: sessoPersona, professione: professionePersona } = obj;
+
+
+console.log(sessoPersona);
