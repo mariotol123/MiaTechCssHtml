@@ -51,3 +51,27 @@ function somma (...altriNumeri){
 }
 
 console.log(somma(2,3,6,7,8,9));
+
+
+let arrayNumbers3 = [3,4,5,6,7,8];
+
+let [tre,quattro, ...resto] = arrayNumbers3;
+
+console.log(tre);
+console.log(quattro);
+console.log(resto);
+
+
+let persona = {
+    nome: "Mimmo",
+    cognome: "Napolitano",
+    citta: "Milano",
+    provincia: "Milano"
+}
+
+
+let {nome,cognome, ...propieta} = persona;
+
+console.log(nome);
+console.log(cognome);
+console.log(propieta);
