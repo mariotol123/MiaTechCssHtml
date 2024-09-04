@@ -75,3 +75,13 @@ let {nome,cognome, ...propieta} = persona;
 console.log(nome);
 console.log(cognome);
 console.log(propieta);
+
+
+let jsonStringify = JSON.stringify(persona);
+console.log(jsonStringify);
+
+
+let stringaJson = '{"pranzo": "Piselli", "cena": "Tartufo"}';
+
+let jsonParse = JSON.parse(stringaJson);
+console.log(jsonParse);
