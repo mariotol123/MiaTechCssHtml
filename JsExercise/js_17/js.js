@@ -18,3 +18,15 @@ let arrayNumbers2 = [500,600,700];
 
 let joinArray = [...arrayNumbers,...arrayNumbers2];
 console.log(joinArray);
+
+
+
+let obj = {
+    nome: "Mario",
+    cognome: "Tolvo"
+}
+
+let newObj = {...obj, eta: 26};
+
+console.log(obj);
+console.log(newObj);
