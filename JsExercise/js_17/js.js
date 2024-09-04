@@ -30,3 +30,24 @@ let newObj = {...obj, eta: 26};
 
 console.log(obj);
 console.log(newObj);
+
+
+
+
+
+
+function somma (...altriNumeri){
+    
+    let somma = 0;
+
+    altriNumeri.forEach(element => {
+        
+        somma += element;
+
+    });
+
+    return somma;
+
+}
+
+console.log(somma(2,3,6,7,8,9));
