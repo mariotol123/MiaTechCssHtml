@@ -85,3 +85,52 @@ let stringaJson = '{"pranzo": "Piselli", "cena": "Tartufo"}';
 
 let jsonParse = JSON.parse(stringaJson);
 console.log(jsonParse);
+
+
+
+let persone = `[
+    {
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "età": 30,
+        "città": "Roma",
+        "professione": "Ingegnere"
+    },
+    {
+        "nome": "Giulia",
+        "cognome": "Bianchi",
+        "età": 25,
+        "città": "Milano",
+        "professione": "Designer"
+    },
+    {
+        "nome": "Luca",
+        "cognome": "Verdi",
+        "età": 28,
+        "città": "Napoli",
+        "professione": "Medico"
+    },
+    {
+        "nome": "Anna",
+        "cognome": "Neri",
+        "età": 35,
+        "città": "Torino",
+        "professione": "Avvocato"
+    }
+]`;
+
+let personeJson = JSON.parse(persone);
+console.log(personeJson);
+
+let nuovaPersona = {
+    nome: "Luca",
+    cognome: "Verdi",
+    età: 28
+};
+
+personeJson.push(nuovaPersona);
+
+console.log(personeJson);
+
+let personeObjStringify = JSON.stringify(personeJson);
+console.log(personeObjStringify);
