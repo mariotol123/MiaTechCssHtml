@@ -33,4 +33,31 @@ console.log(`
     };
 
 
-    console.log(stampaPersona(persona))
+    console.log(stampaPersona(persona));
+
+
+    let persone = [
+        {
+          nome: "Mario",
+          cognome: "Rossi",
+          età: 30
+        },
+        {
+          nome: "Luisa",
+          cognome: "Verdi",
+          età: 25
+        },
+        {
+          nome: "Giovanni",
+          cognome: "Bianchi",
+          età: 40
+        }
+      ];
+
+      console.table(persone);
+
+
+
+      console.group("Gruppo 1");
+        console.log("Messaggio nel gruppo 1");
+        console.log("Altro messaggio nel gruppo 1");
