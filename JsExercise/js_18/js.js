@@ -3,6 +3,13 @@ let cognome = "Tolvo";
 let eta = 27;
 let citta = "Napoli";
 
+if(nome != "Vittorio"){
+    console.error("Nome non valido")
+}
+if(nome != "Michele"){
+    console.warn("Warning")
+}
+
 console.log(`Il mio nome e' ${nome} e il mio cognome e' ${cognome}`);
 
 console.log(`
