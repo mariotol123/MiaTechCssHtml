@@ -10,3 +10,20 @@ console.log(`
     vivo a ${citta}
     e ho ${eta}
     `);
+
+
+
+    let persona = {
+        nome: "Alfonso",
+        citta: "Milano",
+        eta: 42,
+        comune: "Milano"
+    }
+
+
+    function stampaPersona (p) {
+        return `${p.nome}, ${p.citta}, ${p.eta}, ${p.comune}`
+    };
+
+
+    console.log(stampaPersona(persona))
