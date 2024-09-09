@@ -27,6 +27,46 @@
         }
 
         console.log(division(0,6));
+
+
+
+
+        function stringOperation(input) {
+    try {
+        
+        if (typeof input !== 'string') {
+            throw new TypeError('L\'input deve essere una stringa');
+        }
+
+        
+        if (input.length === 0) {
+            throw new Error('La stringa non può essere vuota');
+        }
+
+        
+        let result = input.toUpperCase();
+        console.log("Stringa trasformata: " + result);
+
+    } catch (error) {
+        
+        if (error instanceof TypeError) {
+            console.error("Errore di tipo:", error.message);
+        }
+        
+        else if (error instanceof Error) {
+            console.error("Errore generico:", error.message);
+        }
+        
+        else {
+            console.error("Errore sconosciuto:", error);
+        }
+    }
+}
+
+
+    stringOperation("ciao mondo");    
+    stringOperation(123);             
+    stringOperation(""); 
     </script>
 </body>
 </html>
