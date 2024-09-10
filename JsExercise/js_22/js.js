@@ -27,6 +27,22 @@ callbackSomma(2,5,function (result) {
 
 
 
-//CallBack annidato
+
+
+
+//Promise 
+
+function callPromise () {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve("Promessa risolta");
+        }, 2000)
+    })
+}
+
+
+callPromise().then((message) => {
+    console.log(message);
+})
 
 
