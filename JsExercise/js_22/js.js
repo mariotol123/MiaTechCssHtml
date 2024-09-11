@@ -34,15 +34,30 @@ callbackSomma(2,5,function (result) {
 
 function callPromise () {
     return new Promise((resolve,reject) => {
-        setTimeout(() => {
-            resolve("Promessa risolta");
-        }, 2000)
+
+        let ok = false;
+
+            if(ok){
+                setTimeout(() => {
+                    resolve("Promessa risolta");
+                }, 2000)
+            
+        } else {
+            reject("Promessa irrisolta");
+        } 
+        
     })
 }
 
 
-callPromise().then((message) => {
+callPromise().then(
+    (message) => {
     console.log(message);
 })
+    .catch(
+        (errore) => {
+            console.log(errore)
+        }
+    );
 
 
