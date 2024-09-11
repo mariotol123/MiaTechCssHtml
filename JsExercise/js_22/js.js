@@ -61,3 +61,32 @@ callPromise().then(
     );
 
 
+
+    function addition (a,b) {
+        return new Promise((resolve,reject) => {
+            let result = a + b;
+
+            if(result == 3){
+                resolve("La somma e' 3");
+            } else {
+                reject("La somma e' diversa da 3");
+            }
+        })
+    }
+
+
+    addition(2,2).then(
+        (message) => {
+            console.log(message);
+        }
+    )
+        .catch(
+            (error) => {
+                console.log(error);
+            }
+        )
+        .finally(
+            console.log("Addition sta eseguendo...")
+        )
+
+
