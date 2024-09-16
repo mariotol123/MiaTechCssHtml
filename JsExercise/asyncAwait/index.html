@@ -18,6 +18,25 @@
         }
 
         asincrona();
+
+
+
+        async function function2(params) {
+            let boolean = await params;
+
+            try{
+                if(params){
+                    console.log(params);
+                } else {
+                    throw new error("Errore")
+                }
+            } catch (errore){
+                console.log("Errore catturato")
+            }
+
+        }
+
+        function2(true);
     </script>
 </body>
 </html>
