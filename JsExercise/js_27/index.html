@@ -30,7 +30,7 @@
             })
         }
 
-        Promise.all([primaFunzione(2),secondaFunzione(4)])
+        Promise.all([primaFunzione(2),secondaFunzione(4)])  //Aspetta tutte le promesse ma se anche solo una venisse reject, si attiva solo il blocco catch
             .then(
                 (resole) => {
                     console.log(resole)
@@ -60,6 +60,45 @@
                         console.log(resolve)
                     }
                 )
+
+
+
+
+
+
+                const promise3 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Risultato3")
+                }, 3000)
+            })
+
+            const promise4 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Risultato4")
+                }, 2000)
+            })
+
+
+            const promise5 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    reject("Risultato5")
+                }, 5000)
+            })
+
+
+            Promise.allSettled([promise3,promise4,promise5]) //Aspetta tutte le promesse e ci mostra lo stato sia di quelle resolve che di quelle reject
+                .then(
+                    (resolve) => {
+                        console.log(resolve)
+                    }
+                )
+                .catch(
+                    (reject) => {
+                        console.log(reject)
+                    }
+                )
+
+
     </script>
 </body>
 </html>
