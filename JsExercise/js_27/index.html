@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+        function primaFunzione (number) {
+            return new Promise ((resolve,reject) => {
+
+                setTimeout( () => {
+                    resolve(number)
+                }, 2000)
+
+            })
+        }
+
+
+
+        function secondaFunzione (number) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(number)
+                },1000)
+            })
+        }
+
+        Promise.all([primaFunzione(2),secondaFunzione(4)])
+            .then(
+                (resole) => {
+                    console.log(resole)
+                }
+            )
+
+    </script>
+</body>
+</html>
