@@ -37,6 +37,29 @@
                 }
             )
 
+
+
+
+
+
+            const promise1 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Risultato1")
+                }, 3000)
+            })
+
+            const promise2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Risultato2")
+                }, 2000)
+            })
+
+            Promise.race([promise1,promise2]) //Una volta che la prima promessa si risolve o ri rigetta, le altre non vengono piu calcolate
+                .then(
+                    (resolve) => {
+                        console.log(resolve)
+                    }
+                )
     </script>
 </body>
 </html>
