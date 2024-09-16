@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function name() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Mario")
+        }, 5000);
+    });
+}
+
+function surname() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Tolvo")
+        }, 10000);
+    });
+}
+
+    async function nameSurname() {
+    let risultato1 = await name();
+    let risultato2 = await surname();
+
+    console.log(risultato1);
+    console.log(risultato2);
+    console.log("Entrambe le funzioni sono risolte");
+    }
+
+    nameSurname();
+
+
+
+    </script>
+</body>
+</html>
