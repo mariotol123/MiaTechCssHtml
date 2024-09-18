@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function fetchCatFact() {
+    try {
+        let response = await fetch("https://catfact.ninja/fact", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8"
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Errore:', error);
+    }
+}
+
+fetchCatFact();
+    </script>
+</body>
+</html>
