@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function setCookie(nome,valore){
+            const date = new Date();
+            date.setTime(date.getTime() + 48*60*60*1000);
+            let expires = "expires=" + date.toUTCString();
+
+            document.cookie = nome + " = " + valore + " ; " + expires + "; path=/";
+        }
+
+        setCookie("nome-e-cognomeeeeeeeee", " Mario Tolvo");
+
+
+
+        function deleteCookie(nome) {
+            const date = new Date();
+    
+            date.setTime(date.getTime() - 1000);
+            let expires = "expires=" + date.toUTCString();
+    
+    
+            document.cookie = nome + "=; " + expires + "; path=/";
+        }
+
+
+             deleteCookie("nome-e-cognome");
+
+
+
+        function getCookie(nome){
+
+            let cookieSplice = document.cookie.split(";");
+
+                for(let i = 0; i < cookieSplice.length; i++){
+                    if (cookieSplice[i].indexOf(nome + "=") === 0){
+                        return cookieSplice[i]
+                    }
+                }   
+
+                console.log("Cookie non trovato");
+                return null;
+
+        }
+
+        let cookieValue = getCookie("nome-e-cognomeeee");
+        console.log(cookieValue);
+        
+
+    </script>
+</body>
+</html>
