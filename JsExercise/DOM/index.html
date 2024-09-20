@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+       
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iusto aliquam vitae qui tempora nam voluptatum ut numquam consectetur? Eveniet ipsum harum molestias sequi numquam possimus, exercitationem nesciunt ducimus quam.</p>
+    <p id="p-2">Secondo Paragrafo <span>e il dom e' un argomento moltissimo moltissimo interessante</span></p>
+    <p id="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eius debitis ipsa corporis officia, amet earum corrupti iste fuga. Soluta rem nam suscipit dolorum reprehenderit nisi corrupti aliquam sapiente voluptatum?</p>
+    <script>
+        const $p2 = document.getElementById("p-2");
+        const $span = document.querySelector("span");
+        const $p3 = document.getElementById("p-3");
+
+
+        console.log($p3.innerText = "CIAOOOOO");
+        $p3.style.cssText = "background-color: red; color: blue; font-size: 50px";
+        
+
+        console.log(document);
+        console.log($p2);
+        console.log($span);
+    </script>
+</body>
+</html>

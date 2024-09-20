@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Il mio nome e': <strong id="credenziali"></strong></p>
+    <button id="set-button" type="button">Imposta nome e cognome</button>
+    <button id="delete-button" type="button">Elimina nome e cognome</button>
+
+    <script>
+        const nameSurname = document.getElementById("credenziali");
+        const elementButton = document.getElementById("set-button");
+        const deleteButton = document.getElementById("delete-button");
+
+        const setInput = localStorage.getItem("my-credential") || "";
+        nameSurname.innerHTML = setInput;
+
+        elementButton.addEventListener("click", () => {
+            const setInput = prompt("Inserisci nome e cognome");
+            localStorage.setItem("my-credential", setInput);
+            nameSurname.innerHTML = setInput;
+            console.log(setInput);
+
+        })
+
+        deleteButton.addEventListener("click", () => {
+           const savedName = localStorage.getItem("my-credential");
+           
+            if(savedName){
+                localStorage.removeItem("my-credential");
+                nameSurname.innerHTML = "";
+                console.log("Local Storage eliminato");
+            } else {
+                console.log("LocalStorage non presente");
+            }
+        })
+
+
+    </script>
+</body>
+</html>
