@@ -25,6 +25,25 @@
         console.log(document);
         console.log($p2);
         console.log($span);
+
+
+        const ul = document.createElement("ul");
+        const li = document.createElement("li");
+        const li2 = document.createElement("li");
+        const li3 = document.createElement("li");
+        const li4 = document.createElement("li");
+        const li5 = document.createElement("li");
+        li.textContent = "home";
+        li2.textContent = "About";
+        li3.textContent = "Contact";
+        li4.textContent = "Help Me";
+        li5.textContent = "Info";
+        ul.appendChild(li);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        ul.appendChild(li4);
+        ul.appendChild(li5);
+        document.body.appendChild(ul);
     </script>
 </body>
 </html>
