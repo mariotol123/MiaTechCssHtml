@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="name">Nome :</label>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label for="surname">Cognome :</label>
+            <input type="text" id="surname">
+        </div>
+        <button type="button" id="button">Submit</button>
+    </form>
+    <script>
+        const $button = document.getElementById("button");
+        const $name = document.getElementById("name");
+        const $surname = document.getElementById("surname");
+
+        $button.addEventListener("click", (e) => {
+            e.preventDefault();
+            if($name.value == "" || $surname.value == ""){
+                alert("Compilare i campi");
+            } else {
+                console.log($name.value, $surname.value);
+            }
+        })
+
+        
+
+    </script>
+</body>
+</html>
