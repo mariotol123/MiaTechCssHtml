@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Example</title>
+</head>
+<body>
+
+    <h2>Gestione di localStorage e sessionStorage</h2>
+    
+    <p>Valore salvato in <strong>localStorage</strong>: <span id="local-value"></span></p>
+    <p>Valore salvato in <strong>sessionStorage</strong>: <span id="session-value"></span></p>
+    
+    <button id="set-local" type="button">Imposta valore in localStorage</button>
+    <button id="set-session" type="button">Imposta valore in sessionStorage</button>
+    <br><br>
+    <button id="get-local" type="button">Recupera valore da localStorage</button>
+    <button id="get-session" type="button">Recupera valore da sessionStorage</button>
+    <br><br>
+    <button id="delete-local" type="button">Elimina valore da localStorage</button>
+    <button id="delete-session" type="button">Elimina valore da sessionStorage</button>
+
+    <script>
+        const localDisplay = document.getElementById("local-value");
+        const sessionDisplay = document.getElementById("session-value");
+
+
+        // Impostare valore in localStorage
+        document.getElementById("set-local").addEventListener("click", () => {
+            const value = prompt("Inserisci un valore da salvare in localStorage:");
+            if (value) {
+                localStorage.setItem("local-key", value);
+                console.log(`Valore salvato in localStorage: ${value}`);
+                localDisplay.innerHTML = value;
+            } else {
+                console.log("Nessun valore inserito per localStorage");
+            }
+            
+        });
+
+        // Impostare valore in sessionStorage
+        document.getElementById("set-session").addEventListener("click", () => {
+            const value = prompt("Inserisci un valore da salvare in sessionStorage:");
+            if (value) {
+                sessionStorage.setItem("session-key", value);
+                console.log(`Valore salvato in sessionStorage: ${value}`);
+                sessionDisplay.innerHTML = value;
+            } else {
+                console.log("Nessun valore inserito per sessionStorage");
+            }
+            
+        });
+
+        // Recuperare valore da localStorage
+        document.getElementById("get-local").addEventListener("click", () => {
+            const value = localStorage.getItem("local-key");
+            if (value) {
+                console.log(`Valore recuperato da localStorage: ${value}`);
+            } else {
+                console.log("Nessun valore presente in localStorage");
+            }
+            
+        });
+
+        // Recuperare valore da sessionStorage
+        document.getElementById("get-session").addEventListener("click", () => {
+            const value = sessionStorage.getItem("session-key");
+            if (value) {
+                console.log(`Valore recuperato da sessionStorage: ${value}`);
+            } else {
+                console.log("Nessun valore presente in sessionStorage");
+            }
+            
+        });
+
+        // Eliminare valore da localStorage
+        document.getElementById("delete-local").addEventListener("click", () => {
+            const input = prompt("Inserisci il valore da eliminare");
+            const saved = localStorage.getItem("local-key");
+
+            if(saved){
+                if(input === saved){
+                    localStorage.removeItem("local-key");
+                    localStorage.innerHTML = "";
+                    console.log("LocalStorage eliminato");
+                } else{
+                    alert("Valore non presente");
+                }
+            } else {
+                console.log("LocalStorage non presente");
+            }
+        });
+
+        // Eliminare valore da sessionStorage
+        document.getElementById("delete-session").addEventListener("click", () => {
+            const input = prompt("Inserisci il valore da eliminare");
+            const saved = sessionStorage.getItem("session-key");
+
+            if(saved){
+                if(input === saved){
+                    sessionStorage.removeItem("session-key");
+                    sessionDisplay.innerHTML = "";
+                    console.log("SessionStorage eliminato");
+                } else{
+                    alert("Valore non presente");
+                }
+            } else {
+                console.log("SessionStorage non presente");
+            }
+           
+        });
+
+        
+    </script>
+
+</body>
+</html>
