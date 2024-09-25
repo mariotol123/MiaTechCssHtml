@@ -10,11 +10,13 @@
     <p>Il mio nome e': <strong id="credenziali"></strong></p>
     <button id="set-button" type="button">Imposta nome e cognome</button>
     <button id="delete-button" type="button">Elimina nome e cognome</button>
+    <button id="recupera">Recupera</button>
 
     <script>
         const nameSurname = document.getElementById("credenziali");
         const elementButton = document.getElementById("set-button");
         const deleteButton = document.getElementById("delete-button");
+        const recupera = document.getElementById("recupera");
 
         const setInput = localStorage.getItem("my-credential") || "";
         nameSurname.innerHTML = setInput;
@@ -36,6 +38,19 @@
                 console.log("Local Storage eliminato");
             } else {
                 console.log("LocalStorage non presente");
+            }
+        })
+
+        recupera.addEventListener("click" , () => {
+            const inputValue = prompt("Inserisci lo storage da recuperare");
+            const savedName = localStorage.getItem("my-credential");
+
+            if(savedName){
+                if(inputValue === savedName){
+                    console.log(savedName);
+                } else {
+                    alert("I valori non corrispondono")
+                }
             }
         })
 

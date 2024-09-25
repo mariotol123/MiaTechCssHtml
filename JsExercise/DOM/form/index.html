@@ -15,7 +15,7 @@
             <label for="surname">Cognome :</label>
             <input type="text" id="surname">
         </div>
-        <button type="button" id="button">Submit</button>
+        <button type="submit" id="button">Submit</button>
     </form>
     <script>
         const $button = document.getElementById("button");
@@ -24,7 +24,7 @@
 
         $button.addEventListener("click", (e) => {
             e.preventDefault();
-            if($name.value == "" || $surname.value == ""){
+            if($name.value === "" || $surname.value === ""){
                 alert("Compilare i campi");
             } else {
                 console.log($name.value, $surname.value);
