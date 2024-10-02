@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./es1/*.html", // Includi i file HTML
     "./es1/**/*.js", // Includi i file JS (se presenti)
