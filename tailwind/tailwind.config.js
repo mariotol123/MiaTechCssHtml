@@ -37,5 +37,13 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      backgroundColor: ['hover'],
+      textColor: ['hover'],
+      borderColor: ['hover'],
+      scale: ['hover'],
+    },
+  },
   plugins: [],
 }
