@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white p-8">
+      <h2 class="text-2xl font-bold mb-6 text-center">Modulo di Registrazione</h2>
+      <form class="space-y-4">
+        <!-- Campo Nome -->
+        <div>
+          <label for="name" class="block text-gray-700">Nome</label>
+          <input id="name" name="name" type="text" placeholder="Inserisci il tuo nome"
+            class="mt-1 block w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary active:border-secondary active:ring-1 active:ring-secondary transition-colors duration-200">
+        </div>
+  
+        <!-- Campo Email -->
+        <div>
+          <label for="email" class="block text-gray-700">Email</label>
+          <input id="email" name="email" type="email" placeholder="Inserisci la tua email"
+            class="mt-1 block w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent active:border-secondary active:ring-1 active:ring-secondary transition-colors duration-200">
+        </div>
+  
+        <!-- Campo Password -->
+        <div>
+          <label for="password" class="block text-gray-700">Password</label>
+          <input id="password" name="password" type="password" placeholder="Inserisci la tua password"
+            class="mt-1 block w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 active:border-secondary active:ring-1 active:ring-secondary transition-colors duration-200">
+        </div>
+  
+        <!-- Bottone di Invio -->
+        <div>
+          <button type="submit"
+            class="w-full px-4 py-2 bg-primary text-white font-semibold rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:outline-none active:bg-primary-dark transition-transform transform active:scale-95 duration-200">
+            Registrati
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
