@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <body class="bg-gray-100 p-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <h1 class="text-4xl font-bold text-center mb-8">Responsive Tailwind Layout</h1>
+            
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-blue-200 p-6">
+                    <h2 class="text-xl font-semibold">Box 1 - Always Visible</h2>
+                    <p class="text-gray-600">Questo box è sempre visibile su ogni schermo.</p>
+                </div>
+    
+                
+                <div class="hidden md:block bg-green-200 p-6">
+                    <h2 class="text-xl font-semibold">Box 2 - Visible on Medium Screens</h2>
+                    <p class="text-gray-600">Questo box è nascosto su schermi piccoli.</p>
+                </div>
+    
+                
+                <div class="hidden lg:block bg-yellow-200 p-6">
+                    <h2 class="text-xl font-semibold">Box 3 - Visible on Large Screens</h2>
+                    <p class="text-gray-600">Questo box è nascosto su schermi medi e piccoli.</p>
+                </div>
+            </div>
+    
+            
+            <div class="block md:hidden bg-red-200 mt-6 p-4 text-center">
+                <p class="text-lg font-bold">Questo messaggio è visibile solo su schermi piccoli!</p>
+            </div>
+    
+            
+            <div class="hidden lg:flex justify-center items-center bg-purple-200 mt-6 p-4">
+                <p class="text-lg font-bold text-center">CIAOOOO</p>
+            </div>
+        </div>
+</body>
+</html>
