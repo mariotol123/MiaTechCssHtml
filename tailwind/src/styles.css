@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: #1E293B; /* Grigio scuro */
+  }
+
+  p {
+    font-family: 'Georgia', serif;
+    color: #475569; /* Grigio medio */
+    line-height: 1.75;
+  }
+}
+
 @layer components {
     .custom-card {
       @apply bg-white rounded-lg shadow-md p-6;
@@ -18,4 +31,22 @@
     .custom-card-footer {
       @apply mt-6 text-right text-sm font-medium text-blue-600;
     }
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: #1D4ED8; /* Blu primario */
+  }
+
+  .bg-secondary {
+    background-color: #9333EA; /* Viola secondario */
+  }
+
+  .text-primary {
+    color: #1D4ED8; /* Blu primario */
+  }
+
+  .text-secondary {
+    color: #9333EA; /* Viola secondario */
+  }
 }
