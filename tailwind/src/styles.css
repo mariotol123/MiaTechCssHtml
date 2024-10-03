@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .custom-card {
+      @apply bg-white rounded-lg shadow-md p-6;
+    }
+  
+    .custom-card-header {
+      @apply text-xl font-bold mb-4 text-gray-700;
+    }
+  
+    .custom-card-body {
+      @apply text-gray-600 leading-relaxed;
+    }
+  
+    .custom-card-footer {
+      @apply mt-6 text-right text-sm font-medium text-blue-600;
+    }
+}
