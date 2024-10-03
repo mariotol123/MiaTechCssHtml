@@ -7,6 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderRadius: {
+        'custom-card': '12px',
+        'custom-btn': '8px',
+      },
+      spacing: {
+        'card-padding': '1.5rem',
+        'btn-padding': '0.5rem 1.25rem',
+      },
       colors: {
         "nuovo-colore": "#ff5733", // Colore personalizzato
         "altro-colore": "#33c1ff",
