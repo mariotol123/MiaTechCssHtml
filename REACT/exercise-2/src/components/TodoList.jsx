@@ -1,5 +1,5 @@
 import useFetch from "../hooks/useFetch";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import useFilteredTodos from "../hooks/useFilteredTodos";
 import React from "react";
 
@@ -7,7 +7,7 @@ import React from "react";
 function TodoList () {
     const {data,error,loading} = useFetch("https://jsonplaceholder.typicode.com/todos");
     const [searchTerm, setSearchTerm] = useState(''); 
-    const filteredTodos = useFilteredTodos(data, searchTerm);
+    const filteredTodos = useMemo(() => useFilteredTodos(data, searchTerm)) ;
 
     const handleSearchChange = useCallback((e) => {
         setSearchTerm(e.target.value);
