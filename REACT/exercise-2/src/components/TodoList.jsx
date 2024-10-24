@@ -1,63 +1,56 @@
-    import useFetch from "../hooks/useFetch";
-    import {
-    useState,
-    useCallback,
-    useMemo,
-    useRef,
-    useEffect,
-    useContext,
-    } from "react";
-    import useFilteredTodos from "../hooks/useFilteredTodos";
-    import { TodoContext } from "../hooks/TodoContext";
-    import { Link } from "react-router-dom";
-    import React from "react";
+import useFilteredTodos from "../hooks/useFilteredTodos";
+import { TodoContext } from "../hooks/TodoContext";
+import React, { useContext, useMemo, useRef, useEffect, useCallback } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 
-    function TodoList() {
-    const { todos, error, loading } = useContext(TodoContext);
-    const [searchTerm, setSearchTerm] = useState("");
-    const filteredTodos = useFilteredTodos(todos, searchTerm);
-    const memoizedFilteredTodos = useMemo(() => filteredTodos, [filteredTodos]);
-    const inputRef = useRef();
+function TodoList() {
+  const { todos, error, loading } = useContext(TodoContext);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchTerm = searchParams.get("search") || "";
+  const filteredTodos = useFilteredTodos(todos, searchTerm);
+  const memoizedFilteredTodos = useMemo(() => filteredTodos, [filteredTodos]);
+  const inputRef = useRef();
 
-    const handleSearchChange = useCallback((e) => {
-        setSearchTerm(e.target.value);
-    }, []);
+  const handleSearchChange = useCallback((e) => {
+    const value = e.target.value;
+    setSearchParams({ search: value });
+  }, [setSearchParams]);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-        if (inputRef.current) {
-            inputRef.current.focus();
-        }
-        }, 100); //Non mi funzionava perche useEffect veniva eseguito prima del montaggio di input.
-    }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
-    if (loading) return <p>Loading todos...</p>;
-    if (error) return <p>{error}</p>;
-    console.log(todos);
+  if (loading) return <p>Loading todos...</p>;
+  if (error) return <p>{error}</p>;
 
-    return (
-        <div>
-        <h1>Todo List...</h1>
-        {
-            <input
-            ref={inputRef}
-            type="text"
-            placeholder="RIcerca todos..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-            />
-        }
-        <ul>
-            {memoizedFilteredTodos.map((todo) => (
-            <li key={todo.id}>
-                <Link to={`/todo/${todo.id}`}>
-                {todo.title} {todo.completed ? "✅" : "❌"}
-                </Link>
-            </li>
-            ))}
-        </ul>
-        </div>
-    );
-    }
+  return (
+    <div>
+      <h1>Todo List...</h1>
+      {
+        <input
+          ref={inputRef}
+          type="text"
+          placeholder="Ricerca todos..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+      }
+      <ul>
+        {memoizedFilteredTodos.map((todo) => (
+          <li key={todo.id}>
+            <Link to={`/todo/${todo.id}`}>
+              {todo.title} {todo.completed ? "✅" : "❌"}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-    export default TodoList;
+export default TodoList;
