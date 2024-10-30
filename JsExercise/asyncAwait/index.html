@@ -11,9 +11,9 @@
 
 
         async function asincrona () {
-            setTimeout (async () => {
+            setTimeout ( () => {
                 let messaggio = await ("Ecco il messaggio");
-                console.log(messaggio);
+                resolve(messaggio)
             }, 2000)
         }
 
@@ -22,13 +22,13 @@
 
 
         async function function2(params) {
-            let boolean = await params;
+            let boolean = params;
 
             try{
                 if(params){
                     console.log(params);
                 } else {
-                    throw new error("Errore")
+                    throw new Error("Errore")
                 }
             } catch (errore){
                 console.log("Errore catturato")
