@@ -1,20 +1,23 @@
-import useFilteredTodos from "../hooks/useFilteredTodos";
-import { TodoContext } from "../hooks/TodoContext";
-import React, { useContext, useMemo, useRef, useEffect, useCallback } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTodoComplete } from '../features/todosSlice';
+import React, { useRef, useEffect, useCallback } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 
 function TodoList() {
-  const { todos, error, loading } = useContext(TodoContext);
+  const dispatch = useDispatch();
+  const todos = useSelector(state => state.todos);
   const [searchParams, setSearchParams] = useSearchParams();
   const searchTerm = searchParams.get("search") || "";
-  const filteredTodos = useFilteredTodos(todos, searchTerm);
-  const memoizedFilteredTodos = useMemo(() => filteredTodos, [filteredTodos]);
   const inputRef = useRef();
 
   const handleSearchChange = useCallback((e) => {
     const value = e.target.value;
     setSearchParams({ search: value });
   }, [setSearchParams]);
+
+  const filteredTodos = todos.filter(todo =>
+    todo.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,27 +28,29 @@ function TodoList() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) return <p>Loading todos...</p>;
-  if (error) return <p>{error}</p>;
+  const handleToggleComplete = (id) => {
+    dispatch(toggleTodoComplete(id));
+  };
 
   return (
     <div>
       <h1>Todo List...</h1>
-      {
-        <input
-          ref={inputRef}
-          type="text"
-          placeholder="Ricerca todos..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-      }
+      <input
+        ref={inputRef}
+        type="text"
+        placeholder="Ricerca todos..."
+        value={searchTerm}
+        onChange={handleSearchChange}
+      />
       <ul>
-        {memoizedFilteredTodos.map((todo) => (
+        {filteredTodos.map((todo) => (
           <li key={todo.id}>
             <Link to={`/todo/${todo.id}`}>
               {todo.title} {todo.completed ? "✅" : "❌"}
             </Link>
+            <button onClick={() => handleToggleComplete(todo.id)}>
+              {todo.completed ? "Mark Incomplete" : "Mark Complete"}
+            </button>
           </li>
         ))}
       </ul>
